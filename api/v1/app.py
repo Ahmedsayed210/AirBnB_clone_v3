@@ -7,10 +7,8 @@ from flask import Flask, jsonify
 from models import storage
 from os import getenv
 from api.v1.views import app_views
-from flask_cors import CORSxs34
 
 app = Flask(__name__)
-CORS(app, resources={r"/api/v1/*": {"origins": "*"}})
 app.register_blueprint(app_views)
 app.url_map.strict_slashes = False
 
