@@ -8,19 +8,15 @@
     <link rel="stylesheet" type="text/css" href="../static/styles/3-footer.css?{{ cache_id }}">
     <link rel="stylesheet" type="text/css" href="../static/styles/6-filters.css?{{ cache_id }}">
     <link type="text/css" rel="stylesheet" href="../static/styles/8-places.css?{{ cache_id }}">
-    <!-- Link the new CSS file -->
-    <link rel="stylesheet" type="text/css" href="../static/styles/2-hbnb.css">
     <link rel="icon" href="../static/images/icon.png" />
-    <!-- Import the new JavaScript file -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="../static/scripts/3-hbnb.js"></script>
+    <script src="/static/scripts/4-hbnb.js"></script>
     <title>HBnB</title>
 </head>
 
 <body>
     <header>
         <div class="logo"></div>
-        <!-- New div for API status -->
         <div id="api_status"></div>
     </header>
     <div class="container">
@@ -49,8 +45,7 @@
                 <div class="popover">
                     <ul>
                         {% for amenity in amenities %}
-                        <li>
-                            <input type="checkbox" data-id="{{ amenity.id }}" data-name="{{ amenity.name }}">
+                        <li> <input type="checkbox" data-id="{{ amenity.id }}" data-name="{{ amenity.name }}">
                             {{ amenity.name }}
                         </li>
                         {% endfor %}
@@ -62,7 +57,9 @@
         <div class="placesh1">
             <h1>Places</h1>
         </div>
-        <!-- Removed Jinja section of displaying all places -->
+        <section class="places">
+            <!-- <h1>Places</h1> -->
+        </section>
     </div>
     <footer>
         <p>Holberton School</p>
